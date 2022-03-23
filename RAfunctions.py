@@ -14,7 +14,7 @@
 # input: Panda file with the features by columns
 # output ranking of the features
 def FeatureRanking(featuresPanda):
-
+    a = 1
     # First the amount of columns of the features are computed:
 
     a = 2
