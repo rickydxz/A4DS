@@ -51,7 +51,6 @@ def FeatureRanking(featuresPanda):
     # row from the table
     row = 0
 
-    FischerLists.append([0]*37)
     for index1 in range(len(numbersList)):
         num1 = numbersList[index1]
         numbersList2 = range(index1+1,len(numbersList))
