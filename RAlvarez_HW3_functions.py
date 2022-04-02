@@ -62,8 +62,9 @@ def FeatureRanking(featuresPanda):
             FischerLists.append([0]*numColumns)
             FischerLists[row][0] = num1
             FischerLists[row][1] = num2
-            meanDiff = meanList[index1] - meanList[index2]
+            meanDiff = (meanList[index1] - meanList[index2]) ** 2
+            stdSum = stdList[index1] ** 2 + stdList[index2] ** 2
             for featureNum in range(numFeatures):
-                FischerLists[row][2+featureNum] = meanDiff[featureNum+1]
+                FischerLists[row][2+featureNum] = meanDiff[featureNum+1] / stdSum[featureNum+1]
             row = row + 1
     return FischerLists
